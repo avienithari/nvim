@@ -6,6 +6,12 @@ keymap.set("n", "x", '"_x')
 
 keymap.set("c", "W", "w<CR>")
 
+keymap.set("n", "<leader>h", vim.cmd.nohlsearch, opts) -- clear highlights
+
+keymap.set("n", "<leader>L", "<cmd>Lazy<CR>", { noremap = true, silent = true }) -- open Lazy
+
+keymap.set("n", "<leader>g", "<cmd>Git<CR>", { noremap = true, silent = true }) -- open fugitive
+
 -- window keymaps
 keymap.set("n", "<leader>sv", "<C-w>v") -- split vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split horizontally
@@ -15,6 +21,10 @@ keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 -- keep cursor at the middle of the page
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- move lines
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 
 -- better pasting
 keymap.set("x", "<leader>p", '"_dP')
