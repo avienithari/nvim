@@ -23,7 +23,7 @@ return {
             },
             snippet = {
                 expand = function(args)
-                    luasnip.lsp_expand(args.body)
+                    luasnip_config.lsp_expand(args.body)
                 end,
             },
             mapping = cmp_config.mapping.preset.insert({

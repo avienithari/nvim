@@ -9,8 +9,9 @@ keymap.set("c", "W", "w<CR>")
 keymap.set("n", "<leader>h", vim.cmd.nohlsearch, opts) -- clear highlights
 
 keymap.set("n", "<leader>L", "<cmd>Lazy<CR>", { noremap = true, silent = true }) -- open Lazy
+keymap.set("n", "<leader>M", "<cmd>Mason<CR>") -- open Mason
 
-keymap.set("n", "<leader>g", "<cmd>Git<CR>", { noremap = true, silent = true }) -- open fugitive
+keymap.set("n", "<leader>g", "<cmd>Git<CR>", { noremap = true, silent = true }) -- open Fugitive
 
 -- window keymaps
 keymap.set("n", "<leader>sv", "<C-w>v") -- split vertically
