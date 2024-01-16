@@ -1,7 +1,7 @@
 return {
     {
         "rose-pine/neovim",
-        lazy = false, 
+        lazy = false,
         priority = 1000,
         config = function()
             local rose_pine_config = require("rose-pine")

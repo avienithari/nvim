@@ -5,10 +5,10 @@ return {
             enable = true,
             cloak_character = "*",
             highlight_gruop = "Comment",
-            patterns = { 
+            patterns = {
                 {
                     file_pattern = {
-                        ".env*", 
+                        ".env*",
                     },
                     cloak_pattern = "=.+"
                 },
