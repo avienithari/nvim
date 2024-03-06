@@ -21,3 +21,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
         vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
     end
 })
+
+vim.api.nvim_create_autocmd({"BufWritePre"}, {
+    command = [[%s/\s\+$//e]],
+    desc = "Autoremove trailing whitespaces",
+})
