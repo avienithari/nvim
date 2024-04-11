@@ -6,6 +6,8 @@ keymap.set("n", "x", '"_x')
 
 keymap.set("c", "W", "w<CR>")
 
+vim.keymap.set("n", "<leader>X", "<cmd>!chmod +x %<CR>", { silent = true })
+
 keymap.set("n", "<leader>h", vim.cmd.nohlsearch, opts) -- clear highlights
 
 keymap.set("n", "<leader>L", "<cmd>Lazy<CR>", { noremap = true, silent = true }) -- open Lazy
