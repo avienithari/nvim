@@ -5,7 +5,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.wrap = false
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 10
 vim.opt.colorcolumn = "80"
 vim.opt.signcolumn = "yes"
 vim.opt.ignorecase = true
@@ -20,3 +20,5 @@ vim.opt.splitbelow = true
 vim.opt.iskeyword:append("-")
 vim.opt.undofile = true
 vim.opt.swapfile = false
+vim.opt.guicursor = ""
+vim.opt.cursorline = true
