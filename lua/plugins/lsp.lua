@@ -9,9 +9,11 @@ return {
         "hrsh7th/cmp-cmdline",
         "hrsh7th/nvim-cmp",
         "j-hui/fidget.nvim",
+        "folke/neodev.nvim",
     },
 
     config = function()
+        require("neodev").setup({})
         require("fidget").setup({})
         require("mason").setup({})
         require("mason-lspconfig").setup({

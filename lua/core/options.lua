@@ -20,5 +20,4 @@ vim.opt.splitbelow = true
 vim.opt.iskeyword:append("-")
 vim.opt.undofile = true
 vim.opt.swapfile = false
-vim.opt.guicursor = ""
 vim.opt.cursorline = true
