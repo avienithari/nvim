@@ -3,4 +3,5 @@ return {
     "mbbill/undotree",
     "tpope/vim-fugitive",
     "inkarkat/vim-ReplaceWithRegister",
+    "avienithari/scribe",
 }
