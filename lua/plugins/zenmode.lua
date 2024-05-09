@@ -6,9 +6,9 @@ return {
     config = function()
         vim.keymap.set("n", "<leader>Z", function()
             require("zen-mode").setup {
-                window = {
-                    width = 100,
-                    options = { }
+                window = { width = 100, },
+                plugins = {
+                    options = { laststatus = 3 },
                 },
             }
             require("zen-mode").toggle()
