@@ -40,6 +40,18 @@ return {
                         },
                     })
                 end,
+                ["solargraph"] = function ()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.solargraph.setup({
+                        root_dir = lspconfig.util.root_pattern("Gemfile", ".git", "."),
+                    })
+                end,
+                ["rubocop"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.rubocop.setup({
+                        root_dir = lspconfig.util.root_pattern("Gemfile", ".git", "."),
+                    })
+                end,
             },
         })
     end
