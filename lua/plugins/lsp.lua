@@ -18,10 +18,16 @@ return {
         require("mason").setup({})
         require("mason-lspconfig").setup({
             ensure_installed = {
-                "gopls",
+                "clangd",
                 "lua_ls",
+                "gopls",
+                "golangci_lint_ls",
                 "pyright",
                 "rust_analyzer",
+                "solargraph",
+                "tsserver",
+                "vimls",
+                "zls",
             },
             handlers = {
                 function(server_name)
