@@ -7,6 +7,7 @@ keymap.set("n", "x", '"_x')
 keymap.set("c", "W", "w<CR>")
 
 vim.keymap.set("n", "<leader>X", "<cmd>!chmod +x %<CR>", { silent = true })
+vim.keymap.set("n", "<leader><leader>X", "<cmd>source %<CR>")
 
 keymap.set("n", "<leader>h", vim.cmd.nohlsearch, opts) -- clear highlights
 
@@ -16,6 +17,7 @@ keymap.set("n", "<leader>G", "<cmd>Git<CR>", { noremap = true, silent = true }) 
 keymap.set("n", "<leader>E", ":NvimTreeToggle<CR>") -- toggle nvimtree
 keymap.set("n", "<leader>U", ":UndotreeToggle<CR>") -- toggle Undotree
 keymap.set("n", "<leader>n", ":ScribeToggle<CR>", { silent = true }) -- toggle scribe
+keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" }) -- open oil
 
 -- window keymaps
 keymap.set("n", "<leader>sv", "<C-w>v") -- split vertically
