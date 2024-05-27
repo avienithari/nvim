@@ -18,6 +18,7 @@ keymap.set("n", "<leader>E", ":NvimTreeToggle<CR>") -- toggle nvimtree
 keymap.set("n", "<leader>U", ":UndotreeToggle<CR>") -- toggle Undotree
 keymap.set("n", "<leader>n", ":ScribeToggle<CR>", { silent = true }) -- toggle scribe
 keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" }) -- open oil
+keymap.set("n", "<leader>D", function() vim.cmd("tabnew") vim.cmd("DBUI") end, { silent = true }) -- open dbui
 
 -- window keymaps
 keymap.set("n", "<leader>sv", "<C-w>v") -- split vertically
@@ -39,8 +40,8 @@ keymap.set("x", "<leader>p", '"_dP')
 -- tab keymaps
 keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-keymap.set("n", "<leader>tn", ":tabn<CR>") -- go to next tab
-keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
+keymap.set("n", "<left>", "gT")
+keymap.set("n", "<right>", "gt")
 
 -- plugin keymaps
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- maximize tab
@@ -57,6 +58,6 @@ keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", { silen
 keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")
 
 -- plugin dev keymaps
-keymap.set("n", ",r", ":lua R('scribe')<CR>", { silent = true }) -- reload scribe
-keymap.set("n", ",t", ":PlenaryBustedFile %<CR>") -- test single file with with plenary
-keymap.set("n", ",b", ":buffers<CR>", { silent = true }) -- list buffers
+-- keymap.set("n", ",r", ":lua R('scribe')<CR>", { silent = true }) -- reload scribe
+-- keymap.set("n", ",t", ":PlenaryBustedFile %<CR>") -- test single file with with plenary
+-- keymap.set("n", ",b", ":buffers<CR>", { silent = true }) -- list buffers
