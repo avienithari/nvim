@@ -9,7 +9,7 @@ keymap.set("c", "W", "w<CR>")
 vim.keymap.set("n", "<leader>X", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader><leader>X", "<cmd>source %<CR>")
 
-keymap.set("n", "<leader>h", vim.cmd.nohlsearch, opts) -- clear highlights
+keymap.set("n", "<leader>h", vim.cmd.nohlsearch) -- clear highlights
 
 keymap.set("n", "<leader>L", "<cmd>Lazy<CR>", { noremap = true, silent = true }) -- open Lazy
 keymap.set("n", "<leader>M", "<cmd>Mason<CR>", { silent = true }) -- open Mason
@@ -19,6 +19,7 @@ keymap.set("n", "<leader>U", ":UndotreeToggle<CR>") -- toggle Undotree
 keymap.set("n", "<leader>n", ":ScribeToggle<CR>", { silent = true }) -- toggle scribe
 keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" }) -- open oil
 keymap.set("n", "<leader>D", function() vim.cmd("tabnew") vim.cmd("DBUI") end, { silent = true }) -- open dbui
+keymap.set("n", "<leader>T", ":Trouble diagnostics toggle focus=true<CR>", { silent = true }) -- toggle trouble
 
 -- window keymaps
 keymap.set("n", "<leader>sv", "<C-w>v") -- split vertically
