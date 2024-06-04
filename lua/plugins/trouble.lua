@@ -1,9 +1,9 @@
 return {
-    {
-        "folke/trouble.nvim",
+  {
+    "folke/trouble.nvim",
 
-        config = function()
-            require("trouble").setup({})
-        end
-    },
+    config = function()
+      require("trouble").setup({})
+    end,
+  },
 }

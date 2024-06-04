@@ -16,10 +16,10 @@ return {
   config = function()
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-    require("neodev").setup {}
-    require("fidget").setup {}
-    require("mason").setup {}
-    require("mason-lspconfig").setup {
+    require("neodev").setup({})
+    require("fidget").setup({})
+    require("mason").setup({})
+    require("mason-lspconfig").setup({
       ensure_installed = {
         "clangd",
         "lua_ls",
@@ -34,14 +34,14 @@ return {
       },
       handlers = {
         function(server_name)
-          require("lspconfig")[server_name].setup {
+          require("lspconfig")[server_name].setup({
             capabilities = capabilities,
-          }
+          })
         end,
 
         ["lua_ls"] = function()
-          local lspconfig = require "lspconfig"
-          lspconfig.lua_ls.setup {
+          local lspconfig = require("lspconfig")
+          lspconfig.lua_ls.setup({
             settings = {
               Lua = {
                 diagnostics = {
@@ -49,22 +49,22 @@ return {
                 },
               },
             },
-          }
+          })
         end,
       },
-    }
-    require("conform").setup {
+    })
+    require("conform").setup({
       formatters_by_ft = {
         lua = { "stylua" },
       },
-    }
+    })
     vim.api.nvim_create_autocmd("BufWritePre", {
       callback = function(args)
-        require("conform").format {
+        require("conform").format({
           bufnr = args.buf,
           lsp_fallback = true,
           quiet = true,
-        }
+        })
       end,
     })
   end,

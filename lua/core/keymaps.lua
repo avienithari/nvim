@@ -11,11 +11,11 @@ vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
 
 -- clear highlights
 keymap.set("n", "<CR>", function()
-    if vim.opt.hlsearch:get() then
-        vim.cmd.nohlsearch()
-    else
-        return "<CR>"
-    end
+  if vim.opt.hlsearch:get() then
+    vim.cmd.nohlsearch()
+  else
+    return "<CR>"
+  end
 end)
 
 keymap.set("n", "<leader>L", "<cmd>Lazy<CR>", { noremap = true, silent = true }) -- open Lazy
@@ -24,7 +24,10 @@ keymap.set("n", "<leader>G", "<cmd>Git<CR>", { noremap = true, silent = true }) 
 keymap.set("n", "<leader>U", ":UndotreeToggle<CR>") -- toggle Undotree
 keymap.set("n", "<leader>n", ":ScribeToggle<CR>", { silent = true }) -- toggle scribe
 keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" }) -- open oil
-keymap.set("n", "<leader>D", function() vim.cmd("tabnew") vim.cmd("DBUI") end, { silent = true }) -- open dbui
+keymap.set("n", "<leader>D", function()
+  vim.cmd("tabnew")
+  vim.cmd("DBUI")
+end, { silent = true }) -- open dbui
 keymap.set("n", "<leader>T", ":Trouble diagnostics toggle focus=true<CR>", { silent = true }) -- toggle trouble
 
 -- window keymaps
