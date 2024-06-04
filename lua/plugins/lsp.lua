@@ -13,6 +13,8 @@ return {
     },
 
     config = function()
+        local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
         require("neodev").setup({})
         require("fidget").setup({})
         require("mason").setup({})
@@ -31,7 +33,9 @@ return {
             },
             handlers = {
                 function(server_name)
-                    require("lspconfig")[server_name].setup({})
+                    require("lspconfig")[server_name].setup({
+                        capabilities = capabilities
+                    })
                 end,
 
                 ["lua_ls"] = function()
@@ -44,18 +48,6 @@ return {
                                 },
                             },
                         },
-                    })
-                end,
-                ["solargraph"] = function ()
-                    local lspconfig = require("lspconfig")
-                    lspconfig.solargraph.setup({
-                        root_dir = lspconfig.util.root_pattern("Gemfile", ".git", "."),
-                    })
-                end,
-                ["rubocop"] = function()
-                    local lspconfig = require("lspconfig")
-                    lspconfig.rubocop.setup({
-                        root_dir = lspconfig.util.root_pattern("Gemfile", ".git", "."),
                     })
                 end,
             },
