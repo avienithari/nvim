@@ -7,9 +7,16 @@ keymap.set("n", "x", '"_x')
 keymap.set("c", "W", "w<CR>")
 
 vim.keymap.set("n", "<leader>X", "<cmd>!chmod +x %<CR>", { silent = true })
-vim.keymap.set("n", "<leader><leader>X", "<cmd>source %<CR>")
+vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
 
-keymap.set("n", "<leader>h", vim.cmd.nohlsearch) -- clear highlights
+-- clear highlights
+keymap.set("n", "<CR>", function()
+    if vim.opt.hlsearch:get() then
+        vim.cmd.nohlsearch()
+    else
+        return "<CR>"
+    end
+end)
 
 keymap.set("n", "<leader>L", "<cmd>Lazy<CR>", { noremap = true, silent = true }) -- open Lazy
 keymap.set("n", "<leader>M", "<cmd>Mason<CR>", { silent = true }) -- open Mason
