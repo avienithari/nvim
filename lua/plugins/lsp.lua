@@ -17,9 +17,11 @@ return {
   config = function()
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-    require("neodev").setup({})
     require("fidget").setup({})
     require("mason").setup({})
+    require("neodev").setup({
+      library = { plugins = { "nvim-dap-ui" }, types = true },
+    })
     require("mason-lspconfig").setup({
       ensure_installed = {
         "clangd",
@@ -68,6 +70,8 @@ return {
         "gofumpt",
         "goimports",
         "stylua",
+        "delve",
+        "debugpy",
       },
     })
     require("conform").setup({
