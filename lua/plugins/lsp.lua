@@ -11,6 +11,7 @@ return {
     "j-hui/fidget.nvim",
     "folke/neodev.nvim",
     "stevearc/conform.nvim",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
 
   config = function()
@@ -31,6 +32,11 @@ return {
         "tsserver",
         "vimls",
         "zls",
+        "html",
+        "tsserver",
+        "templ",
+        "cssls",
+        "bashls",
       },
       handlers = {
         function(server_name)
@@ -51,6 +57,17 @@ return {
             },
           })
         end,
+      },
+    })
+    require("mason-tool-installer").setup({
+      ensure_installed = {
+        "erb-lint",
+        "golangci-lint",
+        "htmlhint",
+        "pylint",
+        "gofumpt",
+        "goimports",
+        "stylua",
       },
     })
     require("conform").setup({
