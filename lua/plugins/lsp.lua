@@ -39,6 +39,8 @@ return {
         "templ",
         "cssls",
         "bashls",
+        "dockerls",
+        "docker_compose_language_service",
       },
       handlers = {
         function(server_name)
