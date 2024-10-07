@@ -2,27 +2,6 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-keymap.set("i", "1", "!")
-keymap.set("i", "2", "@")
-keymap.set("i", "3", "#")
-keymap.set("i", "4", "$")
-keymap.set("i", "5", "%")
-keymap.set("i", "6", "^")
-keymap.set("i", "7", "&")
-keymap.set("i", "8", "*")
-keymap.set("i", "9", "(")
-keymap.set("i", "0", ")")
-keymap.set("i", "!", "1")
-keymap.set("i", "@", "2")
-keymap.set("i", "#", "3")
-keymap.set("i", "$", "4")
-keymap.set("i", "%", "5")
-keymap.set("i", "^", "6")
-keymap.set("i", "&", "7")
-keymap.set("i", "*", "8")
-keymap.set("i", "(", "9")
-keymap.set("i", ")", "0")
-
 keymap.set("n", "x", '"_x')
 
 keymap.set("c", "W", "w<CR>")
