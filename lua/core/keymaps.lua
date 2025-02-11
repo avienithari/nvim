@@ -61,6 +61,7 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 keymap.set("v", "<leader>a", ":ScribeRange<CR>")
 keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { silent = true })
 keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", { silent = true })
+keymap.set("n", "<leader>p", ":NoNeckPain<CR>", { silent = true })
 
 -- plugin dev keymaps
 -- keymap.set("n", ",r", ":lua R('scribe')<CR>", { silent = true }) -- reload scribe
