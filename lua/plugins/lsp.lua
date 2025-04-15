@@ -30,7 +30,6 @@ return {
         "golangci_lint_ls",
         "pyright",
         "rust_analyzer",
-        "solargraph",
         "ts_ls",
         "vimls",
         "zls",
@@ -64,7 +63,6 @@ return {
     })
     require("mason-tool-installer").setup({
       ensure_installed = {
-        "erb-lint",
         "golangci-lint",
         "htmlhint",
         "pylint",
@@ -72,7 +70,6 @@ return {
         "goimports",
         "stylua",
         "delve",
-        "debugpy",
       },
     })
     require("conform").setup({
